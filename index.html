@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskHouse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-logo">
+            <img src="images/header.png" alt="TaskHouse">
+        </div>
+        <div class="header-actions">
+            <button class="header-btn attendance-btn">
+                <i class="fas fa-clock"></i>
+            </button>
+            <button class="header-btn logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </header>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="user">
+                <img src="images/pic.jpg" alt="User">
+                <span>User</span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li class="active">
+                <a href="#"><i class="fas fa-home"></i> <span>Home</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-chart-line"></i> <span>My Accounts</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-shopping-cart"></i> <span>VA Leave Request</span></a>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle">
+                    <i class="fas fa-box"></i> 
+                    <span>Operations</span>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#"><span>My Tasks</span></a></li>
+                    <li><a href="#"><span>My VA's</span></a></li>
+                    <li><a href="#"><span>Task Approvals</span></a></li>
+                    <li><a href="#"><span>Time Request</span></a></li>
+                    <li><a href="#"><span>Delegated Task</span></a></li>
+                    <li><a href="#"><span>Task Reports</span></a></li>
+                    <li><a href="#"><span>VA Utilization</span></a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-toggle">
+                    <i class="fas fa-users"></i> 
+                    <span>Human Resources</span>
+                    <i class="fas fa-chevron-down arrow"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#"><span>Memos</span></a></li>
+                    <li><a href="#"><span>VA Attendance</span></a></li>
+                    <li><a href="#"><span>Payslips</span></a></li>
+                    <li><a href="#"><span>Scorecards</span></a></li>
+                    <li><a href="#"><span>Shift Schedules</span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main class="content">
+        <div class="dashboard">
+            <h1 class="dashboard-title">Welcome Back, User!</h1>
+            
+            <div class="quick-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Active Tasks</h3>
+                        <p class="stat-number">12</p>
+                        <p class="stat-desc">4 due today</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-clock"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Time Today</h3>
+                        <p class="stat-number">6h 30m</p>
+                        <p class="stat-desc">of 8 hours</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Attendance</h3>
+                        <p class="stat-number">On Time</p>
+                        <p class="stat-desc">Logged in at 9:00 AM</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h3>Pending Approvals</h3>
+                        <p class="stat-number">3</p>
+                        <p class="stat-desc">requires your attention</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card recent-tasks">
+                    <h2>Recent Tasks</h2>
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <span class="task-title">Update client website</span>
+                            <span class="task-due">Due in 2 hours</span>
+                            <span class="task-status pending">Pending</span>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-title">Create social media posts</span>
+                            <span class="task-due">Due tomorrow</span>
+                            <span class="task-status in-progress">In Progress</span>
+                        </li>
+                        <li class="task-item">
+                            <span class="task-title">Review content updates</span>
+                            <span class="task-due">Due in 3 days</span>
+                            <span class="task-status completed">Completed</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dashboard-card announcements">
+                    <h2>Announcements</h2>
+                    <div class="announcement-list">
+                        <div class="announcement-item">
+                            <h4>Team Meeting</h4>
+                            <p>Weekly sync tomorrow at 10 AM EST</p>
+                            <span class="announcement-date">Today</span>
+                        </div>
+                        <div class="announcement-item">
+                            <h4>System Maintenance</h4>
+                            <p>Scheduled maintenance this weekend</p>
+                            <span class="announcement-date">Yesterday</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal" id="attendanceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Attendance</h2>
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="time-display">
+                    <div class="current-time">
+                        <i class="fas fa-clock"></i>
+                        <span id="currentTime">00:00:00</span>
+                    </div>
+                    <div class="current-date">
+                        <i class="fas fa-calendar"></i>
+                        <span id="currentDate">Loading...</span>
+                    </div>
+                </div>
+                <div class="attendance-status">
+                    <h3>Today's Status</h3>
+                    <div class="status-details">
+                        <p>Clock In: <span id="clockInTime">--:--</span></p>
+                        <p>Clock Out: <span id="clockOutTime">--:--</span></p>
+                        <p>Total Hours: <span id="totalHours">0h 0m</span></p>
+                    </div>
+                </div>
+                <div class="attendance-actions">
+                    <button id="clockInBtn" class="attendance-btn clock-in">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Clock In
+                    </button>
+                    <button id="clockOutBtn" class="attendance-btn clock-out" disabled>
+                        <i class="fas fa-sign-out-alt"></i>
+                        Clock Out
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="poc.js"></script>
+</body>
+</html>
