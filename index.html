@@ -13,9 +13,6 @@
             <img src="images/header.PNG" alt="TaskHouse">
         </div>
         <div class="header-actions">
-            <button class="header-btn attendance-btn">
-                <i class="fas fa-clock"></i>
-            </button>
             <button class="header-btn logout-btn">
                 <i class="fas fa-sign-out-alt"></i>
             </button>
@@ -29,8 +26,11 @@
             </div>
         </div>
         <ul class="nav-links">
-            <li class="active">
-                <a href="#"><i class="fas fa-home"></i> <span>Home</span></a>
+            <li>
+                <a href="#" class="nav-link" data-target="homePage"><i class="fas fa-home"></i> <span>Home</span></a>
+            </li>
+            <li>
+                <a href="#" class="nav-link" data-target="attendancePage"><i class="fas fa-clock"></i> <span>Attendance</span></a>
             </li>
             <li>
                 <a href="#"><i class="fas fa-chart-line"></i> <span>My Accounts</span></a>
@@ -71,7 +71,7 @@
         </ul>
     </nav>
     <main class="content">
-        <div class="dashboard">
+        <div class="dashboard" id="homePage" style="display: block;">
             <h1 class="dashboard-title">Welcome Back, User!</h1>
             
             <div class="quick-stats">
@@ -156,6 +156,27 @@
                             <span class="announcement-date">Yesterday</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="attendance-section" id="attendancePage" style="display: none;">
+            <h3 class="attendance-title">Today's Attendance Status</h3>
+            <div class="attendance-card">
+                <div class="status-details">
+                    <p>Clock In: <span id="clockInTime">--:--</span></p>
+                    <p>Clock Out: <span id="clockOutTime">--:--</span></p>
+                    <p>Total Hours: <span id="totalHours">0h 0m</span></p>
+                </div>
+                <div class="attendance-actions">
+                    <button id="clockInBtn" class="attendance-btn clock-in">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Clock In
+                    </button>
+                    <button id="clockOutBtn" class="attendance-btn clock-out" disabled>
+                        <i class="fas fa-sign-out-alt"></i>
+                        Clock Out
+                    </button>
                 </div>
             </div>
         </div>

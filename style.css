@@ -569,3 +569,103 @@ body {
         flex-direction: column;
     }
 }
+
+/* Attendance Section Styles */
+.attendance-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.attendance-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.attendance-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status-details {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.status-details p {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.attendance-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.attendance-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.attendance-btn.clock-in {
+    background: #28a745;
+    color: white;
+}
+
+.attendance-btn.clock-out {
+    background: #dc3545;
+    color: white;
+}
+
+.attendance-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .attendance-section {
+        padding: 15px;
+    }
+
+    .attendance-title {
+        font-size: 20px;
+    }
+
+    .attendance-card {
+        padding: 15px;
+    }
+
+    .status-details p {
+        font-size: 16px;
+    }
+
+    .attendance-btn {
+        font-size: 14px;
+    }
+}
+
+/* Sidebar Active Link Styles */
+.nav-link.active {
+    background-color: #0d6efd; /* Blue background for active link */
+    color: white; /* White text for better contrast */
+    border-radius: 0.5rem; /* Rounded corners */
+}
