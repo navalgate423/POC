@@ -592,23 +592,48 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+}
+
+.status-indicator {
+    display: flex;
     align-items: center;
-}
-
-.status-details {
     margin-bottom: 20px;
-    text-align: center;
 }
 
-.status-details p {
-    font-size: 18px;
+.status-circle {
+    width: 12px;
+    height: 12px;
+    background-color: #28a745; /* Green color */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.status-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.attendance-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.attendance-table td:first-child {
+    font-weight: bold;
     color: #555;
-    margin: 5px 0;
 }
 
 .attendance-actions {
     display: flex;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .attendance-btn {
@@ -627,6 +652,11 @@ body {
 
 .attendance-btn.clock-in {
     background: #28a745;
+    color: white;
+}
+
+.attendance-btn.break {
+    background: #ffc107; /* Yellow for break */
     color: white;
 }
 
@@ -654,8 +684,8 @@ body {
         padding: 15px;
     }
 
-    .status-details p {
-        font-size: 16px;
+    .attendance-table td {
+        padding: 8px;
     }
 
     .attendance-btn {

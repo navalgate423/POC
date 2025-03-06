@@ -19,32 +19,64 @@ window.onload = function() {
                 }
             });
         });
+
+        // Keep submenu open on hover
+        item.addEventListener('mouseenter', function() {
+            this.classList.add('open');
+        });
+
+        item.addEventListener('mouseleave', function() {
+            if (!this.classList.contains('active')) {
+                this.classList.remove('open');
+            }
+        });
     });
 
     // Update attendance button event listeners
     const clockInBtn = document.getElementById('clockInBtn');
     const clockOutBtn = document.getElementById('clockOutBtn');
+    const breakBtn = document.getElementById('breakBtn');
+    const statusIndicator = document.getElementById('statusIndicator');
 
-    // Clock In/Out functionality
+    // Clock In functionality
     clockInBtn.addEventListener('click', () => {
         const now = new Date();
         document.getElementById('clockInTime').textContent = now.toLocaleTimeString();
+        document.getElementById('attendanceDay').textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
+        
+        // Show the status indicator
+        statusIndicator.style.display = 'flex';
+
+        // Enable the break button
+        breakBtn.disabled = false;
+
+        // Disable the clock in button
         clockInBtn.disabled = true;
         clockOutBtn.disabled = false;
     });
 
+    // Clock Out functionality
     clockOutBtn.addEventListener('click', () => {
         const now = new Date();
         document.getElementById('clockOutTime').textContent = now.toLocaleTimeString();
         clockOutBtn.disabled = true;
 
-        // Calculate total hours (simplified)
+        // Calculate total worked hours (simplified)
         const clockInTime = document.getElementById('clockInTime').textContent;
         const clockIn = new Date(`1/1/2024 ${clockInTime}`);
         const totalMs = now - clockIn;
         const totalHours = Math.floor(totalMs / (1000 * 60 * 60));
         const totalMinutes = Math.floor((totalMs % (1000 * 60 * 60)) / (1000 * 60));
-        document.getElementById('totalHours').textContent = `${totalHours}h ${totalMinutes}m`;
+        document.getElementById('workedHours').textContent = `${totalHours}h ${totalMinutes}m`;
+
+        // Disable the break button when clocking out
+        breakBtn.disabled = true;
+    });
+
+    // Break functionality
+    breakBtn.addEventListener('click', () => {
+        // Logic for taking a break can be added here
+        alert("Break started!"); // Placeholder for break functionality
     });
 
     // Navigation functionality
