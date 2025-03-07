@@ -585,33 +585,22 @@ body {
     margin-bottom: 20px;
 }
 
+.attendance-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.attendance-date, .attendance-time {
+    font-size: 16px;
+    color: #555;
+}
+
 .attendance-card {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.status-indicator {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.status-circle {
-    width: 12px;
-    height: 12px;
-    background-color: #28a745; /* Green color */
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.status-text {
-    font-size: 16px;
-    color: #333;
 }
 
 .attendance-table {
@@ -620,14 +609,19 @@ body {
     margin-bottom: 20px;
 }
 
-.attendance-table td {
+.attendance-table th, .attendance-table td {
     padding: 10px;
     border: 1px solid #ddd;
+    text-align: left;
 }
 
-.attendance-table td:first-child {
-    font-weight: bold;
-    color: #555;
+.attendance-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.attendance-table tbody tr:hover {
+    background-color: #f1f1f1;
 }
 
 .attendance-actions {
@@ -648,6 +642,11 @@ body {
     justify-content: center;
     gap: 8px;
     transition: background-color 0.3s;
+}
+
+.attendance-btn.set-schedule {
+    background: #007bff;
+    color: white;
 }
 
 .attendance-btn.clock-in {
@@ -684,7 +683,7 @@ body {
         padding: 15px;
     }
 
-    .attendance-table td {
+    .attendance-table th, .attendance-table td {
         padding: 8px;
     }
 

@@ -32,51 +32,51 @@ window.onload = function() {
         });
     });
 
-    // Update attendance button event listeners
+    // Function to update the date and time
+    function updateDateTime() {
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('attendanceDate').textContent = `DATE: ${now.toLocaleDateString('en-US', options)}`;
+        document.getElementById('attendanceTime').textContent = `TIME: ${now.toLocaleTimeString()}`;
+    }
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+    updateDateTime(); // Initial call to set the date and time immediately
+
+    // Button functionality
     const clockInBtn = document.getElementById('clockInBtn');
     const clockOutBtn = document.getElementById('clockOutBtn');
     const breakBtn = document.getElementById('breakBtn');
-    const statusIndicator = document.getElementById('statusIndicator');
+    const setScheduleBtn = document.getElementById('setScheduleBtn');
 
     // Clock In functionality
     clockInBtn.addEventListener('click', () => {
-        const now = new Date();
-        document.getElementById('clockInTime').textContent = now.toLocaleTimeString();
-        document.getElementById('attendanceDay').textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
-        
-        // Show the status indicator
-        statusIndicator.style.display = 'flex';
-
-        // Enable the break button
-        breakBtn.disabled = false;
-
-        // Disable the clock in button
+        // Logic for clocking in
+        alert("Clocked In!"); // Placeholder for clock in functionality
         clockInBtn.disabled = true;
+        breakBtn.disabled = false;
         clockOutBtn.disabled = false;
     });
 
     // Clock Out functionality
     clockOutBtn.addEventListener('click', () => {
-        const now = new Date();
-        document.getElementById('clockOutTime').textContent = now.toLocaleTimeString();
+        // Logic for clocking out
+        alert("Clocked Out!"); // Placeholder for clock out functionality
         clockOutBtn.disabled = true;
-
-        // Calculate total worked hours (simplified)
-        const clockInTime = document.getElementById('clockInTime').textContent;
-        const clockIn = new Date(`1/1/2024 ${clockInTime}`);
-        const totalMs = now - clockIn;
-        const totalHours = Math.floor(totalMs / (1000 * 60 * 60));
-        const totalMinutes = Math.floor((totalMs % (1000 * 60 * 60)) / (1000 * 60));
-        document.getElementById('workedHours').textContent = `${totalHours}h ${totalMinutes}m`;
-
-        // Disable the break button when clocking out
         breakBtn.disabled = true;
     });
 
     // Break functionality
     breakBtn.addEventListener('click', () => {
-        // Logic for taking a break can be added here
+        // Logic for taking a break
         alert("Break started!"); // Placeholder for break functionality
+    });
+
+    // Set Schedule functionality
+    setScheduleBtn.addEventListener('click', () => {
+        // Logic for setting a schedule
+        alert("Set Schedule!"); // Placeholder for set schedule functionality
     });
 
     // Navigation functionality
