@@ -33,10 +33,10 @@
                 <a href="#" class="nav-link" data-target="attendancePage"><i class="fas fa-clock"></i> <span>Attendance</span></a>
             </li>
             <li>
-                <a href="#"><i class="fas fa-chart-line"></i> <span>My Accounts</span></a>
+                <a href="#" class="nav-link" data-target="myAccountsPage"><i class="fas fa-user"></i> <span>My Accounts</span></a>
             </li>
             <li>
-                <a href="#"><i class="fas fa-shopping-cart"></i> <span>VA Leave Request</span></a>
+                <a href="#" class="nav-link" data-target="vaLeaveRequestPage"><i class="fas fa-calendar-alt"></i> <span>VA Leave Request</span></a>
             </li>
             <li class="has-submenu">
                 <a href="#" class="submenu-toggle">
@@ -192,19 +192,85 @@
                 </table>
                 
                 <div class="attendance-actions">
-                    <button id="setScheduleBtn" class="attendance-btn set-schedule">
-                        Set Schedule
-                    </button>
-                    <button id="clockInBtn" class="attendance-btn clock-in" disabled>
+                    <button id="clockInBtn" class="attendance-btn clock-in">
                         Clock In
                     </button>
                     <button id="breakBtn" class="attendance-btn break" disabled>
-                        Break
+                        Take Break
+                    </button>
+                    <button id="returnFromBreakBtn" class="attendance-btn return-from-break" disabled>
+                        Return from Break
                     </button>
                     <button id="clockOutBtn" class="attendance-btn clock-out" disabled>
                         Clock Out
                     </button>
                 </div>
+            </div>
+        </div>
+
+        <div class="my-accounts-section" id="myAccountsPage" style="display: none;">
+            <h3 class="accounts-title">My Accounts</h3>
+            
+            <div class="accounts-card">
+                <table class="accounts-table">
+                    <thead>
+                        <tr>
+                            <th>Account Name</th>
+                            <th>Available Hours</th>
+                            <th>Allocated Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody id="accountsBody">
+                        <tr>
+                            <td>Dummy - Account</td>
+                            <td>7:00</td>
+                            <td>3:01</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: center;">Please select an account</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="accounts-actions">
+                    <button id="selectAccountBtn" class="accounts-btn">
+                        Select Account
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="va-leave-request-section" id="vaLeaveRequestPage" style="display: none;">
+            <h3 class="leave-title">My VAs Leave Application</h3>
+            
+            <div class="leave-tabs">
+                <button class="tab-button active" data-target="pending">Pending</button>
+                <button class="tab-button" data-target="approved">Approved</button>
+                <button class="tab-button" data-target="declined">Declined</button>
+            </div>
+
+            <div class="leave-table-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <table class="leave-table">
+                    <thead>
+                        <tr>
+                            <th>Employee Name</th>
+                            <th>Leave Type</th>
+                            <th>Date Submitted</th>
+                            <th>Shift Date</th>
+                            <th>Reason</th>
+                            <th>Proof</th>
+                            <th>Leave Status</th>
+                            <th>Approver Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaveBody">
+                        <tr>
+                            <td colspan="9" style="text-align: center;">No data available</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </main>

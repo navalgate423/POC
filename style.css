@@ -698,3 +698,188 @@ body {
     color: white; /* White text for better contrast */
     border-radius: 0.5rem; /* Rounded corners */
 }
+
+/* My Accounts Section Styles */
+.my-accounts-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.accounts-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.accounts-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accounts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.accounts-table th, .accounts-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.accounts-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.accounts-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.accounts-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.accounts-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.accounts-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .my-accounts-section {
+        padding: 15px;
+    }
+
+    .accounts-title {
+        font-size: 20px;
+    }
+
+    .accounts-card {
+        padding: 15px;
+    }
+
+    .accounts-table th, .accounts-table td {
+        padding: 8px;
+    }
+
+    .accounts-btn {
+        font-size: 14px;
+    }
+}
+
+/* VA Leave Request Section Styles */
+.va-leave-request-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.leave-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.leave-tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 15px; /* Increased padding for a square look */
+    border: 1px solid #007bff; /* Border for the tab */
+    border-radius: 5px 5px 0 0; /* Rounded corners */
+    background-color: #007bff; /* Active tab color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center; /* Center the text */
+    margin-right: -1px; /* Overlap borders */
+}
+
+.tab-button.active {
+    background-color: #0056b3; /* Darker color for active tab */
+}
+
+.tab-button:not(.active) {
+    background-color: white; /* Background for inactive tabs */
+    color: #007bff; /* Text color for inactive tabs */
+}
+
+.leave-table-container {
+    background: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 40px; /* Set a fixed height for a rectangle look */
+}
+
+.leave-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leave-table th, .leave-table td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Add border to table cells */
+    text-align: left;
+}
+
+.leave-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.leave-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .va-leave-request-section {
+        padding: 15px;
+    }
+
+    .leave-title {
+        font-size: 20px;
+    }
+
+    .tab-button {
+        font-size: 14px;
+    }
+
+    .search-input {
+        font-size: 14px;
+    }
+
+    .leave-table th, .leave-table td {
+        padding: 8px;
+    }
+}
